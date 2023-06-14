@@ -124,9 +124,9 @@ struct Page3: View {
     
     var body: some View {
         VStack {
-            Text("Jaeminiman's First Step").font(.largeTitle)
+            Text("Rehab Training Timer").font(.largeTitle)
             Spacer()
-            Text("\(timeType[timerStatus])").font(.title)
+            Text("\(timeType[timerStatus])").font(.title).foregroundColor(fontColor)
             Spacer()
             Text("Remaining Time: \(remainingTime)")
                 .font(.title2).foregroundColor(fontColor)
@@ -194,7 +194,7 @@ struct Page3: View {
                             remainingTime -= 1
                         } else {
                             changeTimer()
-                            playSound()
+                            //playSound()
                         }
                     }
                 } else {
@@ -205,6 +205,7 @@ struct Page3: View {
     }
     
     func startTimer() {
+        playSound()
         guard let woTime = Int(workoutTime) else {
             return
         }
@@ -242,18 +243,28 @@ struct Page3: View {
             if remainingSets <= 0 && remainingReps <= 0 {
                 fontColor = Color.black
                 stopTimer()
+                for _ in 0...3 {
+                    playSound()
+                }
             } else {
+                for _ in 0...1 {
+                    playSound()
+                }
                 timerStatus = 2
                 fontColor = Color.blue
                 remainingTime = reTime
             }
         } else if remainingReps <= 0 && timerStatus == 2{
+            for _ in 0...2 {
+                playSound()
+            }
             timerStatus = 3
             fontColor = Color.green
             remainingTime = pTime
             remainingReps = reReps
             remainingSets -= 1
         } else {
+            playSound()
             timerStatus = 1
             fontColor = Color.red
             remainingTime = woTime
@@ -282,6 +293,9 @@ class SoundPlayer {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
             audioPlayer?.play()
+            while audioPlayer?.isPlaying ?? false {
+                //대기
+            }
         } catch {
             print("Error playing sound: \(error.localizedDescription)")
         }
@@ -292,14 +306,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Text("Jaemini_man 의 재활도우미 💪").font(.title2)
+                Image("comeback") // 사진의 이름 또는 이미지 리소스 이름을 지정합니다.
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 300)
+                NavigationLink(destination: Page3()) {
+                    Text("재활 트레이닝 타이머").font(.title2)
+                }
+                Text("")
                 NavigationLink(destination: Page1()) {
                     Text("dummy1")
                 }
                 NavigationLink(destination: Page2()) {
                     Text("dummy2")
-                }
-                NavigationLink(destination: Page3()) {
-                    Text("첫 번째 재활앱")
                 }
             }
         }
