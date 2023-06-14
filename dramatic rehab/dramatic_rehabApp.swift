@@ -6,9 +6,8 @@
 //
 
 import SwiftUI
+
 @main
-
-
 struct dramatic_rehabApp: App {
     var body: some Scene {
         WindowGroup {

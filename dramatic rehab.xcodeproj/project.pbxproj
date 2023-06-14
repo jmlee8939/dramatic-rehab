@@ -14,6 +14,7 @@
 		46A0AF222A383E5600AA7C88 /* dramatic_rehabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0AF212A383E5600AA7C88 /* dramatic_rehabTests.swift */; };
 		46A0AF2C2A383E5600AA7C88 /* dramatic_rehabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0AF2B2A383E5600AA7C88 /* dramatic_rehabUITests.swift */; };
 		46A0AF2E2A383E5600AA7C88 /* dramatic_rehabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A0AF2D2A383E5600AA7C88 /* dramatic_rehabUITestsLaunchTests.swift */; };
+		46A0AF3C2A39D69E00AA7C88 /* beap.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 46A0AF3B2A39D69D00AA7C88 /* beap.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		46A0AF272A383E5600AA7C88 /* dramatic rehabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dramatic rehabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A0AF2B2A383E5600AA7C88 /* dramatic_rehabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dramatic_rehabUITests.swift; sourceTree = "<group>"; };
 		46A0AF2D2A383E5600AA7C88 /* dramatic_rehabUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dramatic_rehabUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		46A0AF3B2A39D69D00AA7C88 /* beap.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = beap.m4a; path = ../../../../../../Desktop/beap.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				46A0AF102A383E5500AA7C88 /* dramatic_rehabApp.swift */,
 				46A0AF122A383E5500AA7C88 /* ContentView.swift */,
 				46A0AF142A383E5600AA7C88 /* Assets.xcassets */,
+				46A0AF3A2A39D60A00AA7C88 /* Assets.xcassets */,
 				46A0AF162A383E5600AA7C88 /* Preview Content */,
 			);
 			path = "dramatic rehab";
@@ -125,6 +128,15 @@
 				46A0AF2D2A383E5600AA7C88 /* dramatic_rehabUITestsLaunchTests.swift */,
 			);
 			path = "dramatic rehabUITests";
+			sourceTree = "<group>";
+		};
+		46A0AF3A2A39D60A00AA7C88 /* Assets.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				46A0AF3B2A39D69D00AA7C88 /* beap.m4a */,
+			);
+			name = Assets.xcassets;
+			path = "Preview Content/Assets.xcassets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A0AF182A383E5600AA7C88 /* Preview Assets.xcassets in Resources */,
+				46A0AF3C2A39D69E00AA7C88 /* beap.m4a in Resources */,
 				46A0AF152A383E5600AA7C88 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +435,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,6 +464,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
